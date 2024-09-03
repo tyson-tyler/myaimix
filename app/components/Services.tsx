@@ -81,7 +81,7 @@ const Service = () => {
             <div className="p-4 bg-gray-900 rounded-3xl overflow-hidden lg:min-h-[46rem] mt-9">
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="text-white text-2xl mb-4">Video generation</h4>
-                <p className="text-white mb-[2rem]">
+                <p className="text-white mb-[2rem] text-xs">
                   The world most powerful ai photo and video art genreation
                   engine . what will you create ?
                 </p>
