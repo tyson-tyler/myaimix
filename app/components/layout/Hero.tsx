@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import Section from "./section/Section";
 import Image from "next/image";
-import Hello from "./section/good.jpg";
+import Hello from "./section/good.webp";
 import Ch from "./section/play.png";
 import Button from "./ui/Button";
 import Buttons from "./ui/ui";
