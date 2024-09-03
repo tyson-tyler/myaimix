@@ -32,6 +32,7 @@ import discordBlack from "../layout/footer/logo/discord.svg";
 import twitter from "../layout/footer/logo/tw.svg";
 import telegram from "../layout/footer/logo/te.svg";
 import facebook from "../layout/footer/logo/face.svg";
+import instagram from "../layout/footer/logo/i.svg";
 
 export const navigation = [
   {
@@ -85,7 +86,7 @@ export const benefits = [
     id: "1",
     title: "Improve everyday",
     text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
-
+    backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
     light: true,
@@ -94,7 +95,7 @@ export const benefits = [
     id: "2",
     title: "Connect everywhere",
     text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
-
+    backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: be,
     imageUrl: benefitImage2,
   },
@@ -102,7 +103,7 @@ export const benefits = [
     id: "3",
     title: "Fast responding",
     text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
-
+    backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: fast,
     imageUrl: benefitImage2,
     light: true,
@@ -111,7 +112,7 @@ export const benefits = [
     id: "4",
     title: "Ask anything",
     text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
-
+    backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: as,
     imageUrl: benefitImage2,
   },
@@ -119,7 +120,7 @@ export const benefits = [
     id: "5",
     title: "Improve everyday",
     text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
-
+    backgroundUrl: "./src/assets/benefits/card-6.svg",
     iconUrl: arm,
     imageUrl: benefitImage2,
   },
