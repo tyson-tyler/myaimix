@@ -1,0 +1,14 @@
+<svg width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Message bubble -->
+  <rect x="10" y="10" width="180" height="40" rx="20" ry="20" fill="#00aaff"/>
+  <!-- Ellipsis for typing animation -->
+  <circle cx="60" cy="30" r="5" fill="white">
+    <animate attributeName="opacity" from="0" to="1" begin="0s" dur="0.8s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="90" cy="30" r="5" fill="white">
+    <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.8s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="120" cy="30" r="5" fill="white">
+    <animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.8s" repeatCount="indefinite" />
+  </circle>
+</svg>

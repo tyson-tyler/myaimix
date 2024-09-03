@@ -1,0 +1,29 @@
+<svg
+  width="300"
+  height="200"
+  viewBox="0 0 300 200"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Controller body -->
+  <path
+    d="M100,100 C50,100 50,150 100,150 C200,150 200,100 150,100 C150,50 100,50 100,100 Z"
+    fill="#444"
+  />
+  <!-- Left Joystick -->
+  <circle cx="80" cy="120" r="20" fill="#888" />
+  <circle id="joystick" cx="80" cy="120" r="10" fill="#333" />
+
+  <!-- Buttons -->
+  <circle cx="180" cy="110" r="10" fill="#ff5555" />
+  <circle cx="200" cy="130" r="10" fill="#55ff55" />
+  <circle cx="160" cy="130" r="10" fill="#5555ff" />
+  <circle cx="180" cy="150" r="10" fill="#ffff55" />
+
+  <!-- Joystick animation -->
+  <animateMotion
+    href="#joystick"
+    dur="2s"
+    repeatCount="indefinite"
+    path="M 0 0 Q 10 10 20 0 Q 10 -10 0 0"
+  />
+</svg>
