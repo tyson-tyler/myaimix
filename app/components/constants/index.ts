@@ -32,7 +32,6 @@ import discordBlack from "../layout/footer/logo/discord.svg";
 import twitter from "../layout/footer/logo/tw.svg";
 import telegram from "../layout/footer/logo/te.svg";
 import facebook from "../layout/footer/logo/face.svg";
-import instagram from "../layout/footer/logo/i.svg";
 
 export const navigation = [
   {
@@ -71,7 +70,7 @@ export const navigation = [
 export const heroIcons = [heroSmile, plus, Search, Code];
 
 export const notificationImages = [av, av1, av2];
-export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
+export const companyLogos = [yourlogo, discord, facebook, notion, slack];
 
 export const benefits = [
   {
