@@ -48,11 +48,10 @@ const Hero = () => {
                 <div className="h-[1.4rem] bg-neutral-800 rounded-t-[0.9rem]" />
                 <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490] confetti-container">
                   <Image
+                    fill
                     src={Hello}
                     alt="Hero Image"
                     className="w-full object-cover"
-                    width={300}
-                    height={500}
                   />
 
                   <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
