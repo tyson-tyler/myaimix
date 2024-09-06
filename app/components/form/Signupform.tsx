@@ -57,7 +57,7 @@ const SignUpForm = () => {
   }
 
   return (
-    <div className="relative font-semibold min-h-screen w-full flex items-center justify-center md:p-6 bg-black overflow-hidden">
+    <div className="relative font-semibold min-h-screen w-full flex items-center justify-center md:p-6  overflow-hidden">
       {/* Animated Gradient Balls */}
 
       <div className="w-full max-w-lg md:p-8 space-y-8 rounded-lg shadow-lg  relative z-10">
