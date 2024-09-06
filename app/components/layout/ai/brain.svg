@@ -5,7 +5,7 @@
        M150,150 C190,180 190,220 150,250 C110,220 110,180 150,150 Z"
     fill="#f0c0c0"
     stroke="#e07070"
-    stroke-width="5"
+    strokeWidth="5"
   />
   
   <!-- Circuit Path 1 -->
@@ -13,8 +13,8 @@
     d="M150,50 Q180,80 200,100"
     fill="none"
     stroke="#e0e0e0"
-    stroke-width="3"
-    stroke-linecap="round"
+    strokeWidth="3"
+    strokeLinecap="round"
   >
     <animate
       attributeName="stroke-dasharray"
@@ -29,8 +29,8 @@
     d="M200,100 Q220,120 240,140"
     fill="none"
     stroke="#e0e0e0"
-    stroke-width="3"
-    stroke-linecap="round"
+    strokeWidth="3"
+    strokeLinecap="round"
   >
     <animate
       attributeName="stroke-dasharray"
@@ -46,8 +46,8 @@
     d="M150,250 Q120,220 100,200"
     fill="none"
     stroke="#e0e0e0"
-    stroke-width="3"
-    stroke-linecap="round"
+    strokeWidth="3"
+    strokeLinecap="round"
   >
     <animate
       attributeName="stroke-dasharray"
@@ -63,8 +63,8 @@
     d="M100,200 Q80,180 60,160"
     fill="none"
     stroke="#e0e0e0"
-    stroke-width="3"
-    stroke-linecap="round"
+    strokeWidth="3"
+    strokeLinecap="round"
   >
     <animate
       attributeName="stroke-dasharray"

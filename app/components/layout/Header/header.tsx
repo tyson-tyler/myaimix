@@ -30,7 +30,7 @@ const Header = () => {
             ))}
           </div>
         </nav>
-        <Link href={"/"} className="hidden lg:flex">
+        <Link href={"/auth/signup"} className="hidden lg:flex">
           <Button label="Start Now" />
         </Link>
         <SheetSide />
