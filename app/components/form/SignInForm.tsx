@@ -153,7 +153,7 @@ const SignInForm = () => {
             />
 
             <div className="my-2 flex justify-between">
-              <span className="text-white">Don't have account</span>
+              <span className="text-white">Don&apos;t have account</span>
               <Link href={"/auth/signup"}>
                 <span className="text-blue-500 hover:text-blue-300">
                   Sign In
