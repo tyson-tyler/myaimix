@@ -1,46 +1,43 @@
 "use server";
 
-import * as z from "zod";
-import argon2 from "argon2";
-import { SignInvalidator } from "../validator/signInvalidator";
+import { AuthError } from "next-auth";
+import { signIn } from "../auth";
 
-// Updated type definition for ZodFormattedError
 type Res =
   | { success: true }
-  | {
-      success: false;
-      error: z.ZodFormattedError<string>; // Correct type for formatted Zod error
-      statusCode: 400;
-    }
-  | { success: false; error: string; statusCode: 500 }; // Use string for server errors
+  | { success: false; error: string; statusCode: 401 | 500 };
 
-export async function signInuserAction(values: unknown): Promise<Res> {
-  const parseValues = SignInvalidator.safeParse(values);
-
-  // Check if parsing was unsuccessful and return formatted errors
-  if (!parseValues.success) {
-    return {
-      success: false,
-      error: parseValues.error.format(), // Use format() to get ZodFormattedError
-      statusCode: 400,
-    };
-  }
-
-  const { email, password } = parseValues.data;
-
+export async function signinActionuser(values: unknown): Promise<Res> {
   try {
-    const hashPassword = await argon2.hash(password);
-
-    console.log({ email, password: hashPassword });
-
+    if (
+      typeof values !== "object" ||
+      values === null ||
+      Array.isArray(values)
+    ) {
+      throw new Error("Invail json");
+    }
+    await signIn("credentials", { ...values, redirect: false });
     return { success: true };
   } catch (err) {
+    if (err instanceof AuthError) {
+      switch (err.type) {
+        case "CredentialsSignin":
+        case "CallbackRouteError":
+          return {
+            success: false,
+            error: "Invalid creadiental",
+            statusCode: 401,
+          };
+        default:
+          return {
+            success: false,
+            error: "Oops something went error",
+            statusCode: 500,
+          };
+      }
+    }
     console.log(err);
 
-    return {
-      success: false,
-      statusCode: 500, // Updated to 500 for internal server error
-      error: "Something went wrong",
-    };
+    return { success: false, error: "Interserver errror", statusCode: 500 };
   }
 }

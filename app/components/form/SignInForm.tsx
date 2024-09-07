@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 import { LogIn } from "lucide-react";
 import Link from "next/link";
 import { SignInInput, SignInvalidator } from "@/app/validator/signInvalidator";
-import { signInuserAction } from "@/app/actions/signInaction";
+import { signinActionuser } from "@/app/actions/signInaction";
 
 const SignInForm = () => {
   const form = useForm({
@@ -29,18 +29,24 @@ const SignInForm = () => {
     },
   });
 
-  const { handleSubmit, control, formState } = form;
+  const { handleSubmit, control, formState, setError } = form;
 
   const submit = async (value: SignInInput) => {
-    const res = await signInuserAction(value);
+    const res = await signinActionuser(value);
 
     if (res.success) {
+      window.location.href = "/dashboard";
       form.reset();
       console.log("Sucessfully");
     } else {
       switch (res.statusCode) {
-        case 400:
-          return "sorry try again";
+        case 401:
+          setError("password", { message: res.error });
+          break;
+        case 500:
+        default:
+          const error = res.error || "Internal Server Error";
+          setError("password", { message: error });
       }
     }
   };
