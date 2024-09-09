@@ -5,7 +5,7 @@ import SignInForm from "@/app/components/form/SignInForm";
 
 const Page = () => {
   return (
-    <div className="flex flex-col justify-between lg:flex-row h-screen overflow-hidden">
+    <div className="flex flex-col justify-between lg:flex-row h-screen">
       {/* Form Container */}
       <div className="w-full flex items-center justify-center p-6 lg:w-1/2">
         <SignInForm />

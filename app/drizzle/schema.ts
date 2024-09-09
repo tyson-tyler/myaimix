@@ -26,7 +26,7 @@ export const users = pgTable(
     name: text("name"),
     email: text("email").unique(),
     emailVerified: timestamp("emailVerified", { mode: "date" }),
-    image: text("image"),
+    image: text("image").default("https://cdn.waifu.im/3647.png"),
     password: text("password"),
   },
   (table) => ({

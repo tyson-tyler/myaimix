@@ -13,7 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import Logo1 from "../layout/Header/logo1"; // Assuming this is a logo component
+import Logo1 from "../layout/Header/blogo"; // Assuming this is a logo component
 import { Button } from "@/components/ui/button";
 import { LogIn } from "lucide-react";
 import Link from "next/link";
@@ -21,6 +21,7 @@ import { signupuserAction } from "@/app/actions/signupaction";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { redirect } from "next/navigation";
+import { OauthSignInButton } from "./authsignup";
 
 const SignUpForm = () => {
   const [success, setSuccess] = useState(false);
@@ -222,6 +223,13 @@ const SignUpForm = () => {
             </Button>
           </form>
         </Form>
+        <div className="flex justify-center items-center bg-transparent">
+          <hr />{" "}
+          <span className="px-4 uppercase text-xs pt-[-6px] mt-[-10px] text-center flex justify-center items-center text-white bg-transparent">
+            or with
+          </span>
+        </div>
+        <OauthSignInButton signup />
       </div>
     </div>
   );

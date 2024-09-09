@@ -3,7 +3,7 @@ import React from "react";
 const Logo1 = () => {
   return (
     <svg
-      className="w-8 h-8  transition-colors duration-300 fill-purple-600"
+      className="w-12 h-12  transition-colors duration-300 fill-purple-600"
       viewBox="0 0 512 512"
       xmlns="http://www.w3.org/2000/svg"
       transform="rotate(180)"

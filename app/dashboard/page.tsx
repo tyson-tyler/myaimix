@@ -1,7 +1,25 @@
 import React from "react";
+import Topbar from "./components/layout/topbar/topbar";
+import { auth } from "../auth";
+import Image from "next/image";
 
-const page = () => {
-  return <div>page</div>;
-};
+export default async function page() {
+  const session = await auth();
 
-export default page;
+  return (
+    <div className="  ">
+      <h1 className="text-3xl font-semibold text-gray-800 dark:text-white">
+        Welcome to the Dashboard
+      </h1>
+      {/* <Image src={session?.user?.image} alt="hello" width={20} height={20} /> */}
+      {/* <h1>{session?.user?.email}</h1> */}
+      <img
+        src={session?.user?.image}
+        width={40}
+        height={40}
+        className="rounded-md absolute top-3 right-16 lg:right-20"
+      />
+      {/* Content goes here */}
+    </div>
+  );
+}

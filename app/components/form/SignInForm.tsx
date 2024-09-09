@@ -13,12 +13,13 @@ import {
 import { Input } from "@/components/ui/input";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import Logo1 from "../layout/Header/logo1"; // Assuming this is a logo component
+import Logo1 from "../layout/Header/blogo"; // Assuming this is a logo component
 import { Button } from "@/components/ui/button";
 import { LogIn } from "lucide-react";
 import Link from "next/link";
 import { SignInInput, SignInvalidator } from "@/app/validator/signInvalidator";
 import { signinActionuser } from "@/app/actions/signInaction";
+import { OauthSignInButton } from "./authsignup";
 
 const SignInForm = () => {
   const form = useForm({
@@ -52,7 +53,7 @@ const SignInForm = () => {
   };
 
   return (
-    <div className="relative font-semibold min-h-screen w-full flex items-center justify-center md:p-6  overflow-hidden">
+    <div className="relative font-semibold min-h-screen w-full flex items-center justify-center md:p-6">
       {/* Animated Gradient Balls */}
 
       <div className="w-full max-w-lg md:p-8 space-y-8 rounded-lg shadow-lg  relative z-10">
@@ -177,6 +178,13 @@ const SignInForm = () => {
             </Button>
           </form>
         </Form>
+        <div className="flex justify-center items-center bg-transparent">
+          <hr />{" "}
+          <span className="px-4 uppercase text-xs pt-[-6px] mt-[-10px] text-center flex justify-center items-center text-white bg-transparent">
+            or with
+          </span>
+        </div>
+        <OauthSignInButton />
       </div>
     </div>
   );
