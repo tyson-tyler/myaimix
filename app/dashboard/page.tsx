@@ -14,7 +14,7 @@ export default async function page() {
       {/* <Image src={session?.user?.image} alt="hello" width={20} height={20} /> */}
       {/* <h1>{session?.user?.email}</h1> */}
       <img
-        src={session?.user?.image}
+        src={`${session?.user?.image}`}
         width={40}
         height={40}
         className="rounded-md absolute top-3 right-16 lg:right-20"
