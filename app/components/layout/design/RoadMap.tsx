@@ -8,6 +8,7 @@ import { Gradient } from "../Service";
 import grid from "./grid.png";
 import Image from "next/image";
 import loading1 from "./loading.png";
+import ButtonBlur from "../Header/btn";
 
 const Roadmap = () => (
   <Section className="overflow-hidden" id="roadmap">
@@ -76,7 +77,7 @@ const Roadmap = () => (
       </div>
 
       <div className="flex justify-center mt-12 md:mt-15 xl:mt-20">
-        <Button label="Start Now" />
+        {/* <ButtonBlur /> */}
       </div>
     </div>
   </Section>

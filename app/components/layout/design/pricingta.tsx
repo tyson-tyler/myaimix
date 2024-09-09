@@ -2,6 +2,7 @@ import check from "../../layout/section/check.svg";
 import { pricing } from "../../constants";
 import Button from "../ui/Button";
 import Image from "next/image";
+import ButtonBlur from "../Header/btn";
 
 const PricingList = () => {
   return (
@@ -30,7 +31,7 @@ const PricingList = () => {
             )}
           </div>
 
-          <Button label={item.price ? "Get started" : "Contact us"} />
+          {/* <ButtonBlur /> */}
 
           <ul className="mt-4">
             {item.features.map((feature, index) => (

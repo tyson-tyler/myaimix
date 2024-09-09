@@ -4,6 +4,8 @@ import Icon from "./logo";
 import { navigation } from "../../constants";
 import Button from "../ui/Button";
 import { SheetSide } from "../ui/SheetDemo";
+import ButtonBlur from "./btn";
+import ButtonCop from "../ui/Button";
 
 const Header = () => {
   return (
@@ -30,9 +32,9 @@ const Header = () => {
             ))}
           </div>
         </nav>
-        <Link href={"/auth/signup"} className="hidden lg:flex">
-          <Button label="Start Now" />
-        </Link>
+        <div className="hidden lg:flex">
+          <ButtonCop label="Start Now" />
+        </div>
         <SheetSide />
       </div>
     </div>

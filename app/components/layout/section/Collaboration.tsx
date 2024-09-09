@@ -7,6 +7,7 @@ import Check from "./check";
 import Button from "../ui/Button";
 import Logo from "../Header/logo1";
 import { LeftCurve, RightCurve } from "../line";
+import ButtonBlur from "../Header/btn";
 
 const Collaboration = () => {
   return (
@@ -28,7 +29,7 @@ const Collaboration = () => {
               </li>
             ))}
           </ul>
-          <Button label="Start Now" />
+          {/* <ButtonBlur /> */}
         </div>
       </div>
       <div className="lg:ml-auto xl:w-[38rem] mt-4">

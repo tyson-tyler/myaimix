@@ -1,7 +1,6 @@
 import React from "react";
 import Topbar from "./components/layout/topbar/topbar";
 import { auth } from "../auth";
-import Image from "next/image";
 
 export default async function page() {
   const session = await auth();
@@ -14,10 +13,10 @@ export default async function page() {
       {/* <Image src={session?.user?.image} alt="hello" width={20} height={20} /> */}
       {/* <h1>{session?.user?.email}</h1> */}
       <img
-        src={`${session?.user?.image}`}
+        src={`${session?.user?.image || "https://cdn.waifu.im/7656.jpg"}`}
         width={40}
         height={40}
-        className="rounded-md absolute top-3 right-16 lg:right-20"
+        className="rounded-md w-10 h-10 absolute top-3 object-cover right-16 lg:right-20"
       />
       {/* Content goes here */}
     </div>

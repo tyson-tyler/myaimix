@@ -12,6 +12,7 @@ import { ScrollParallax } from "react-just-parallax";
 import Generating from "./ui/Generating";
 import Notification from "./section/Notification";
 import CompanyLogos from "./design/CompanyLogo";
+import ButtonBlur from "./Header/btn";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -39,7 +40,7 @@ const Hero = () => {
             with Myaimix 🎊, and make life easy 🥳
           </p>
           <div className="flex w-full justify-center mb-8 items-center flex-wrap gap-4">
-            <Button label="Get Started" />
+            {/* <ButtonBlur /> */}
             <Buttons label="Documentation" />
           </div>
           <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
