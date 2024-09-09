@@ -2,7 +2,6 @@ import check from "../../layout/section/check.svg";
 import { pricing } from "../../constants";
 import Button from "../ui/Button";
 import Image from "next/image";
-import ButtonBlur from "../Header/btn";
 
 const PricingList = () => {
   return (

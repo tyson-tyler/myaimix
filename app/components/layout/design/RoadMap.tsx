@@ -8,7 +8,6 @@ import { Gradient } from "../Service";
 import grid from "./grid.png";
 import Image from "next/image";
 import loading1 from "./loading.png";
-import ButtonBlur from "../Header/btn";
 
 const Roadmap = () => (
   <Section className="overflow-hidden" id="roadmap">

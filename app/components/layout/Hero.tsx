@@ -12,7 +12,6 @@ import { ScrollParallax } from "react-just-parallax";
 import Generating from "./ui/Generating";
 import Notification from "./section/Notification";
 import CompanyLogos from "./design/CompanyLogo";
-import ButtonBlur from "./Header/btn";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
