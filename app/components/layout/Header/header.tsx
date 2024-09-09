@@ -4,7 +4,7 @@ import Icon from "./logo";
 import { navigation } from "../../constants";
 import Button from "../ui/Button";
 import { SheetSide } from "../ui/SheetDemo";
-import ButtonBlur from "./btn";
+
 import ButtonCop from "../ui/Button";
 
 const Header = () => {
